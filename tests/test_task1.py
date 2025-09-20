@@ -7,9 +7,9 @@ from io import StringIO
 from tasks.task1 import solve
 
 def test_task1_sum_numbers(capsys):
-    # Мы имитируем ввод данных '3' и '7'
+    # Мы имитируем ввод данных '4' и '7'
     with patch('builtins.input', side_effect=['3', '7']):
         solve()  # Теперь мы напрямую вызываем функцию solve()
-        captured = capsys.readouterr()
+        capturd = capsys.readouterr()
         # Проверяем, что вывод содержит ожидаемую строку
-        assert "Сумма: 10" in captured.out
+        assert "Сумма: 10" in capturd.out
